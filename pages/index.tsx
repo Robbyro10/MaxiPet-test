@@ -114,9 +114,6 @@ function HomePage() {
         </h1>
         <BrandRow />
       </div>
-
-      {/* Footer */}
-      <Footer />
     </ShopLayout>
   );
 }
