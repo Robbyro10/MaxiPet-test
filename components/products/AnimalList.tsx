@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { FC } from 'react';
 import dalmata from '../../public/dalmata.svg';
 import DogPaw from '../../public/DogPaw.png';
 
@@ -13,7 +13,7 @@ const animales = [
   'Placeholder',
 ];
 
-export const AnimalList = () => {
+export const AnimalList: FC = () => {
   return (
     <div className="flex justify-between flex-wrap">
       {animales.map((animal) => (

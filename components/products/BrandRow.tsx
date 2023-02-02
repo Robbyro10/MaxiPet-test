@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { FC } from 'react';
 import brand from '../../public/brand.png';
 
-export const BrandRow = () => {
+export const BrandRow: FC = () => {
   return (
     <div className="grid grid-cols-5 gap-10">
       <p>

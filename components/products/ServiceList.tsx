@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FC } from 'react';
 import dalmata from '../../public/dalmata.svg';
 
 const servicios = [
@@ -10,7 +11,7 @@ const servicios = [
   'Fiestas de cumpleaños',
 ];
 
-export const ServiceList = () => {
+export const ServiceList: FC = () => {
   return (
     <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-14 mt-12">
       {servicios.map((servicio) => (

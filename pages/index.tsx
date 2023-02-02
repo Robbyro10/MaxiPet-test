@@ -8,7 +8,7 @@ import {
   ProductRow,
   ServiceList,
 } from '../components/products';
-import { Footer } from '../components/ui';
+import { Container, Footer } from '../components/ui';
 import cat from '../public/cat.png';
 
 function HomePage() {
@@ -31,25 +31,23 @@ function HomePage() {
       </div>
 
       {/* categorias */}
-      <div className="mx-48 mt-10 mb-24">
-        <p className="text-xs text-[#777777]">Lorem ipsum dolor sit amet.</p>
-        <h1 className="text-[#E2081E] font-bold text-xl mb-5">
-          UNA GRAN VARIEDAD DE CATEGORÍAS
-        </h1>
+      <Container
+        title="Una gran variedad de categorías"
+        desc="Lorem ipsum dolor sit amet."
+      >
         <AnimalList />
-      </div>
+      </Container>
 
       {/* Destacados */}
-      <div className="mx-48 mb-24">
-        <p className="text-xs text-[#777777]">Lorem ipsum dolor sit amet.</p>
-        <h1 className="text-[#E2081E] font-bold text-xl mb-5">
-          PRODUCTOS DESTACADOS
-        </h1>
+      <Container
+        title="Productos Destacados"
+        desc="Lorem ipsum dolor sit amet."
+      >
         <div className="flex justify-around flex-wrap">
           <Image src={cat} alt={'Gato gris con comida de gato en frente'} />
           <ProductGrid />
         </div>
-      </div>
+      </Container>
 
       <div className="flex justify-center mx-48 mb-24">
         <img
@@ -65,13 +63,9 @@ function HomePage() {
       </div>
 
       {/* Populares */}
-      <div className="mx-48 mt-10 mb-24">
-        <p className="text-xs text-[#777777]">Lorem ipsum dolor sit amet.</p>
-        <h1 className="text-[#E2081E] font-bold text-xl mb-5">
-          PRODUCTOS POPULARES
-        </h1>
+      <Container title="productos populares" desc="Lorem ipsum dolor sit amet.">
         <ProductRow />
-      </div>
+      </Container>
 
       <div className="flex justify-center mx-48 mb-24">
         <img
@@ -82,38 +76,29 @@ function HomePage() {
       </div>
 
       {/* Ultimos */}
-      <div className="mx-48 mb-24">
-        <p className="text-xs text-[#777777]">Lorem ipsum dolor sit amet.</p>
-        <h1 className="text-[#E2081E] font-bold text-xl mb-5">
-          ÚLTIMOS PRODUCTOS
-        </h1>
+      <Container title="últimos productos" desc="Lorem ipsum dolor sit amet.">
         <div className="flex justify-around flex-wrap">
           <ProductGrid />
           <Image src={cat} alt={'Gato gris con comida de gato en frente'} />
         </div>
-      </div>
+      </Container>
 
       {/* Servicios */}
-      <div className="mx-48 mt-10 mb-24">
-        <p className="text-xs text-[#777777]">Lorem ipsum dolor sit amet.</p>
-        <h1 className="text-[#E2081E] font-bold text-xl mb-5">
-          NUESTROS SERVICIOS
-        </h1>
+      <Container title="nuestros servicios" desc="Lorem ipsum dolor sit amet.">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit ut
           viverra fames sed.
         </p>
         <ServiceList />
-      </div>
+      </Container>
 
       {/* Marcas */}
-      <div className="mx-48 mt-10 mb-24">
-        <p className="text-xs text-[#777777]">Lorem ipsum dolor sit amet.</p>
-        <h1 className="text-[#E2081E] font-bold text-xl mb-5">
-          TRABAJAMOS CON LAS MEJORES MARCAS
-        </h1>
+      <Container
+        title="trabajamos con las mejores marcas"
+        desc="Lorem ipsum dolor sit amet."
+      >
         <BrandRow />
-      </div>
+      </Container>
     </ShopLayout>
   );
 }
